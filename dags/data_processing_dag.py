@@ -1,7 +1,3 @@
-# Removendo a adição ao PYTHONPATH pois agora a pasta app está dentro de dags
-import sys
-import os
-
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
