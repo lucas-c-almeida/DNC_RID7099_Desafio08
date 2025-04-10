@@ -1,5 +1,4 @@
 import pandas as pd
-import re
 
 def main():
     # Read the CSV file
