@@ -1,6 +1,12 @@
 # Contexto
 
-Este projeto faz parte da Pós Graduação em Engenharia de dados pela DNC e Sirius. Utilizamos Apache Airflow e Pandas para estruturar os dados conforme o solicitado:
+Este projeto faz parte da Pós Graduação em Engenharia de dados pela DNC e Sirius. Utilizamos Apache Airflow e Pandas para estruturar os dados, salvando os arquivos em csv, conforme solicitado.
+
+# Informações Úteis
+
+- A DAG construída está em dags/data_processing_dag.py
+- As pipelines podem ser encontradas em dags/app.
+- Para facilitar a execução, há scripts de inicialização do Docker na pasta scripts.
 
 
 # Desafio: **Construindo um Pipeline de Dados com Python**
