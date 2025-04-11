@@ -187,13 +187,13 @@ def process_silver_to_gold():
         # Categorizar idades em faixas etárias
         df['age_group'] = pd.cut(df['age'], bins=age_bins, labels=age_labels, right=False)
         
-        # Agregação por faixa etária e status (active ou inactive)
-        agg_df = df.groupby(['age_group', 'status']).size().reset_index(name='count')
+        # Agregação por faixa etária e subscription_status (active ou inactive)
+        agg_df = df.groupby(['age_group', 'subscription_status']).size().reset_index(name='count')
         
-        # Pivotear a tabela para ter faixas etárias nas linhas e status nas colunas
-        pivot_df = agg_df.pivot_table(index='age_group', columns='status', values='count', fill_value=0).reset_index()
+        # Pivotear a tabela para ter faixas etárias nas linhas e subscription_status nas colunas
+        pivot_df = agg_df.pivot_table(index='age_group', columns='subscription_status', values='count', fill_value=0).reset_index()
         
-        # Garantir que todas as colunas de status existem
+        # Garantir que todas as colunas de subscription_status existem
         if 'active' not in pivot_df.columns:
             pivot_df['active'] = 0
         if 'inactive' not in pivot_df.columns:
