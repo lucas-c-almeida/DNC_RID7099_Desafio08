@@ -7,7 +7,9 @@ Este projeto faz parte da Pós Graduação em Engenharia de dados pela DNC e Sir
 - A DAG construída está em dags/data_processing_dag.py
 - As pipelines podem ser encontradas em dags/app.
 - Para facilitar a execução, há scripts de inicialização do Docker na pasta scripts.
-
+- Estamos utilizando as configurações padrão do airflow para testes:
+    - Username: airflow
+    - Password: airflow
 
 # Desafio: **Construindo um Pipeline de Dados com Python**
 
